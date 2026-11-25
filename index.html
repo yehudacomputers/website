@@ -44,12 +44,28 @@
   .card p{color:#64748b;font-size:15px}
   .b1{background:#dbeafe}.b2{background:#d1fae5}.b3{background:#ffedd5}.b4{background:#ede9fe}
   .alt{background:#f5f8ff}
+  .tech{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .tgroup{background:#fff;border-radius:20px;padding:26px 22px;border:1px solid #e2e8f0;position:relative;overflow:hidden}
+  .tgroup:before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
+  .tg1:before{background:linear-gradient(90deg,#2563eb,#38bdf8)}
+  .tg2:before{background:linear-gradient(90deg,#059669,#34d399)}
+  .tg3:before{background:linear-gradient(90deg,#ea580c,#fbbf24)}
+  .tg4:before{background:linear-gradient(90deg,#7c3aed,#ec4899)}
+  .tgroup h4{font-size:18px;color:#0f172a;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .tgroup h4 span{font-size:22px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{padding:7px 14px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s}
+  .chip:hover{transform:translateY(-2px)}
+  .tg1 .chip{background:#dbeafe;color:#1e40af}
+  .tg2 .chip{background:#d1fae5;color:#065f46}
+  .tg3 .chip{background:#ffedd5;color:#9a3412}
+  .tg4 .chip{background:#ede9fe;color:#5b21b6}
   .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-  .why div{background:#fff;border-radius:18px;padding:26px;border-left:5px solid #2563eb}
-  .why div:nth-child(2){border-color:#059669}.why div:nth-child(3){border-color:#ea580c}
+  .why div{background:#fff;border-radius:18px;padding:26px;border-left:5px solid #2563eb;border:1px solid #e2e8f0;border-left:5px solid #2563eb}
+  .why div:nth-child(2){border-left-color:#059669}.why div:nth-child(3){border-left-color:#ea580c}
   .why h4{font-size:18px;margin-bottom:6px;color:#0f172a}
   .why p{color:#64748b;font-size:15px}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;counter-reset:s}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
   .step{text-align:center;padding:10px}
   .num{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-weight:800;font-size:21px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
   .step h4{font-size:18px;margin-bottom:6px}
@@ -71,12 +87,12 @@
 
 <nav><div class="container nav-in">
   <a href="#" class="logo">Yehuda<span>Computers</span></a>
-  <div class="links"><a href="#services">Services</a><a href="#why">Why us</a><a href="#process">How we work</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#services">Services</a><a href="#tech">Technologies</a><a href="#why">Why us</a><a href="#process">How we work</a><a href="#contact">Contact</a></div>
   <a href="#contact" class="btn btn-nav">Get in touch</a>
 </div></nav>
 
 <header class="hero"><div class="container hero-in">
-  <div class="pill">Microsoft Partner</div>
+  <div class="pill">IT &amp; Security Solutions</div>
   <h1>Advanced IT solutions for businesses, built on professionalism and security</h1>
   <p>We deploy advanced IT systems with a strong emphasis on information security, and provide comprehensive, ongoing support so your systems stay stable, secure and reliable.</p>
   <div class="cta">
@@ -95,7 +111,29 @@
   </div>
 </div></section>
 
-<section id="why" class="alt"><div class="container">
+<section id="tech" class="alt"><div class="container">
+  <div class="head"><div class="tag">Our stack</div><h2>Technologies we work with</h2><p>Proven, enterprise-grade platforms we deploy and support every day.</p></div>
+  <div class="tech">
+    <div class="tgroup tg1">
+      <h4><span>☁️</span>Cloud &amp; Productivity</h4>
+      <div class="chips"><span class="chip">Microsoft 365</span><span class="chip">Exchange Online</span><span class="chip">SharePoint</span><span class="chip">OneDrive</span><span class="chip">Teams</span><span class="chip">Azure</span></div>
+    </div>
+    <div class="tgroup tg2">
+      <h4><span>🛡️</span>Security &amp; Identity</h4>
+      <div class="chips"><span class="chip">Microsoft Defender</span><span class="chip">Entra ID</span><span class="chip">Intune</span><span class="chip">Firewalls</span><span class="chip">MFA</span><span class="chip">Endpoint Protection</span></div>
+    </div>
+    <div class="tgroup tg3">
+      <h4><span>🖧</span>Servers &amp; Infrastructure</h4>
+      <div class="chips"><span class="chip">Windows Server</span><span class="chip">Active Directory</span><span class="chip">Hyper-V</span><span class="chip">VMware</span><span class="chip">Linux</span><span class="chip">DNS &amp; DHCP</span></div>
+    </div>
+    <div class="tgroup tg4">
+      <h4><span>🌐</span>Networking &amp; Backup</h4>
+      <div class="chips"><span class="chip">LAN / Wi-Fi</span><span class="chip">VPN</span><span class="chip">Switching &amp; Routing</span><span class="chip">NAS</span><span class="chip">Backup &amp; Recovery</span><span class="chip">Monitoring</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="why"><div class="container">
   <div class="head"><div class="tag">Why us</div><h2>Why businesses choose us</h2></div>
   <div class="why">
     <div><h4>Professionalism</h4><p>Every project is planned and delivered to high professional standards.</p></div>
@@ -104,7 +142,7 @@
   </div>
 </div></section>
 
-<section id="process"><div class="container">
+<section id="process" class="alt"><div class="container">
   <div class="head"><div class="tag">How we work</div><h2>Simple, clear process</h2></div>
   <div class="steps">
     <div class="step"><div class="num">1</div><h4>Consultation</h4><p>We learn your business and current setup.</p></div>
@@ -126,7 +164,7 @@
   </div>
 </div></section>
 
-<footer>© Yehuda Computers · Advanced IT &amp; Cloud Services · Microsoft Partner</footer>
+<footer>© Yehuda Computers · Advanced IT &amp; Security Solutions</footer>
 
 </body>
 </html>
