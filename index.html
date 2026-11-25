@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yehuda Computers | Advanced IT Solutions</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Arial,sans-serif;color:#1e293b;background:#fff;line-height:1.6}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1120px;margin:0 auto;padding:0 22px}
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-weight:800;font-size:21px;color:#0f4c81}
+  .logo span{color:#7c3aed}
+  .links{display:flex;gap:26px;font-size:15px;font-weight:500}
+  .links a:hover{color:#2563eb}
+  .btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:600;font-size:16px;transition:.2s}
+  .btn-main{background:#fff;color:#1d4ed8}
+  .btn-main:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+  .btn-ghost{border:2px solid rgba(255,255,255,.7);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-nav{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;padding:10px 20px;font-size:14px}
+  .hero{background:linear-gradient(135deg,#0b3a66 0%,#1d4ed8 50%,#7c3aed 100%);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+  .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07)}
+  .hero:before{width:420px;height:420px;top:-140px;right:-120px}
+  .hero:after{width:300px;height:300px;bottom:-130px;left:-90px}
+  .hero-in{position:relative;max-width:760px}
+  .pill{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:6px 16px;border-radius:999px;font-size:14px;margin-bottom:22px}
+  .hero h1{font-size:46px;line-height:1.15;margin-bottom:18px;font-weight:800}
+  .hero p{font-size:19px;opacity:.93;margin-bottom:34px;max-width:640px}
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  section{padding:84px 0}
+  .head{text-align:center;max-width:640px;margin:0 auto 48px}
+  .tag{color:#7c3aed;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase}
+  .head h2{font-size:34px;color:#0f172a;margin:8px 0 10px}
+  .head p{color:#64748b;font-size:17px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:30px 24px;transition:.25s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(30,64,175,.12);border-color:transparent}
+  .ic{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:18px}
+  .card h3{font-size:19px;margin-bottom:8px;color:#0f172a}
+  .card p{color:#64748b;font-size:15px}
+  .b1{background:#dbeafe}.b2{background:#d1fae5}.b3{background:#ffedd5}.b4{background:#ede9fe}
+  .alt{background:#f5f8ff}
+  .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .why div{background:#fff;border-radius:18px;padding:26px;border-left:5px solid #2563eb}
+  .why div:nth-child(2){border-color:#059669}.why div:nth-child(3){border-color:#ea580c}
+  .why h4{font-size:18px;margin-bottom:6px;color:#0f172a}
+  .why p{color:#64748b;font-size:15px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;counter-reset:s}
+  .step{text-align:center;padding:10px}
+  .num{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-weight:800;font-size:21px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+  .step h4{font-size:18px;margin-bottom:6px}
+  .step p{color:#64748b;font-size:15px}
+  .contact{background:linear-gradient(135deg,#7c3aed 0%,#1d4ed8 100%);color:#fff;border-radius:30px;padding:60px 30px;text-align:center}
+  .contact h2{font-size:34px;margin-bottom:10px}
+  .contact>p{opacity:.9;font-size:17px;margin-bottom:34px}
+  .cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:900px;margin:0 auto}
+  .cbox{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:22px;transition:.2s;display:block}
+  .cbox:hover{background:rgba(255,255,255,.24)}
+  .cbox .e{font-size:28px;display:block;margin-bottom:6px}
+  .cbox small{display:block;opacity:.85;font-size:13px}
+  .cbox b{font-size:17px}
+  footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0}
+  @media(max-width:760px){.links{display:none}.hero h1{font-size:34px}.hero{padding:70px 0 80px}section{padding:64px 0}.head h2,.contact h2{font-size:27px}}
+</style>
+</head>
+<body>
+
+<nav><div class="container nav-in">
+  <a href="#" class="logo">Yehuda<span>Computers</span></a>
+  <div class="links"><a href="#services">Services</a><a href="#why">Why us</a><a href="#process">How we work</a><a href="#contact">Contact</a></div>
+  <a href="#contact" class="btn btn-nav">Get in touch</a>
+</div></nav>
+
+<header class="hero"><div class="container hero-in">
+  <div class="pill">Microsoft Partner</div>
+  <h1>Advanced IT solutions for businesses, built on professionalism and security</h1>
+  <p>We deploy advanced IT systems with a strong emphasis on information security, and provide comprehensive, ongoing support so your systems stay stable, secure and reliable.</p>
+  <div class="cta">
+    <a href="https://wa.me/972508588880" class="btn btn-main">Chat on WhatsApp</a>
+    <a href="#services" class="btn btn-ghost">Our services</a>
+  </div>
+</div></header>
+
+<section id="services"><div class="container">
+  <div class="head"><div class="tag">What we do</div><h2>Our services</h2><p>End-to-end IT for businesses, from setup to day-to-day support.</p></div>
+  <div class="grid">
+    <div class="card"><div class="ic b1">🖥️</div><h3>System installation and deployment</h3><p>Planning, installing and configuring advanced systems tailored to your business.</p></div>
+    <div class="card"><div class="ic b2">🛡️</div><h3>Information security</h3><p>Protecting your data, users and devices against modern threats.</p></div>
+    <div class="card"><div class="ic b3">☁️</div><h3>Microsoft 365</h3><p>Licensing, deployment, migration and ongoing support for Microsoft 365.</p></div>
+    <div class="card"><div class="ic b4">🤝</div><h3>Ongoing IT support</h3><p>Comprehensive, responsive support that keeps your business running.</p></div>
+  </div>
+</div></section>
+
+<section id="why" class="alt"><div class="container">
+  <div class="head"><div class="tag">Why us</div><h2>Why businesses choose us</h2></div>
+  <div class="why">
+    <div><h4>Professionalism</h4><p>Every project is planned and delivered to high professional standards.</p></div>
+    <div><h4>Security first</h4><p>Information security is built into everything we deploy, not added later.</p></div>
+    <div><h4>Personal support</h4><p>A direct line to someone who knows your systems and your business.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="container">
+  <div class="head"><div class="tag">How we work</div><h2>Simple, clear process</h2></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h4>Consultation</h4><p>We learn your business and current setup.</p></div>
+    <div class="step"><div class="num">2</div><h4>Planning</h4><p>A tailored, secure solution that fits your needs.</p></div>
+    <div class="step"><div class="num">3</div><h4>Deployment</h4><p>Professional installation with minimal disruption.</p></div>
+    <div class="step"><div class="num">4</div><h4>Ongoing support</h4><p>We stay with you to keep everything running.</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="container">
+  <div class="contact">
+    <h2>Let's talk about your business</h2>
+    <p>Support hours: Sun–Thu, 9:00–18:00 (Israel time)</p>
+    <div class="cgrid">
+      <a class="cbox" href="https://wa.me/972508588880"><span class="e">💬</span><small>WhatsApp</small><b>Send a message</b></a>
+      <a class="cbox" href="tel:+972508588880"><span class="e">📞</span><small>Phone</small><b>+972-50-8588880</b></a>
+      <a class="cbox" href="mailto:y@ysysadmin.co.il"><span class="e">✉️</span><small>Email</small><b>y@ysysadmin.co.il</b></a>
+    </div>
+  </div>
+</div></section>
+
+<footer>© Yehuda Computers · Advanced IT &amp; Cloud Services · Microsoft Partner</footer>
+
+</body>
+</html>
