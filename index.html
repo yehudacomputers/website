@@ -9,7 +9,7 @@
   html{scroll-behavior:smooth}
   body{font-family:"Segoe UI",Arial,sans-serif;color:#1e293b;background:#fff;line-height:1.6}
   a{text-decoration:none;color:inherit}
-  .container{max-width:1120px;margin:0 auto;padding:0 22px}
+  .container{max-width:1160px;margin:0 auto;padding:0 22px}
   nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
   .logo{font-weight:800;font-size:21px;color:#0f4c81}
@@ -32,7 +32,7 @@
   .hero p{font-size:19px;opacity:.93;margin-bottom:34px;max-width:640px}
   .cta{display:flex;gap:14px;flex-wrap:wrap}
   section{padding:84px 0}
-  .head{text-align:center;max-width:640px;margin:0 auto 48px}
+  .head{text-align:center;max-width:660px;margin:0 auto 48px}
   .tag{color:#7c3aed;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase}
   .head h2{font-size:34px;color:#0f172a;margin:8px 0 10px}
   .head p{color:#64748b;font-size:17px}
@@ -44,24 +44,31 @@
   .card p{color:#64748b;font-size:15px}
   .b1{background:#dbeafe}.b2{background:#d1fae5}.b3{background:#ffedd5}.b4{background:#ede9fe}
   .alt{background:#f5f8ff}
-  .tech{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-  .tgroup{background:#fff;border-radius:20px;padding:26px 22px;border:1px solid #e2e8f0;position:relative;overflow:hidden}
-  .tgroup:before{content:"";position:absolute;top:0;left:0;right:0;height:5px}
-  .tg1:before{background:linear-gradient(90deg,#2563eb,#38bdf8)}
-  .tg2:before{background:linear-gradient(90deg,#059669,#34d399)}
-  .tg3:before{background:linear-gradient(90deg,#ea580c,#fbbf24)}
-  .tg4:before{background:linear-gradient(90deg,#7c3aed,#ec4899)}
-  .tgroup h4{font-size:18px;color:#0f172a;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-  .tgroup h4 span{font-size:22px}
-  .chips{display:flex;flex-wrap:wrap;gap:9px}
-  .chip{padding:7px 14px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s}
+
+  /* Technologies */
+  .tech{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
+  .tg{background:#fff;border-radius:20px;padding:26px 24px;border:1px solid #e2e8f0;position:relative;overflow:hidden;transition:.25s}
+  .tg:hover{box-shadow:0 14px 30px rgba(30,64,175,.10);transform:translateY(-4px)}
+  .tg:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--bar)}
+  .tg h4{font-size:19px;color:#0f172a;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .tg h4 .ti{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;background:var(--soft)}
+  .sub{margin-bottom:14px}
+  .sub:last-child{margin-bottom:0}
+  .sub small{display:block;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#64748b;margin-bottom:7px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{padding:5px 12px;border-radius:999px;font-size:13.5px;font-weight:600;background:var(--soft);color:var(--ink);transition:.2s}
   .chip:hover{transform:translateY(-2px)}
-  .tg1 .chip{background:#dbeafe;color:#1e40af}
-  .tg2 .chip{background:#d1fae5;color:#065f46}
-  .tg3 .chip{background:#ffedd5;color:#9a3412}
-  .tg4 .chip{background:#ede9fe;color:#5b21b6}
+  .t1{--bar:linear-gradient(90deg,#2563eb,#38bdf8);--soft:#dbeafe;--ink:#1e40af}
+  .t2{--bar:linear-gradient(90deg,#0891b2,#22d3ee);--soft:#cffafe;--ink:#155e75}
+  .t3{--bar:linear-gradient(90deg,#059669,#34d399);--soft:#d1fae5;--ink:#065f46}
+  .t4{--bar:linear-gradient(90deg,#ea580c,#fbbf24);--soft:#ffedd5;--ink:#9a3412}
+  .t5{--bar:linear-gradient(90deg,#4f46e5,#818cf8);--soft:#e0e7ff;--ink:#3730a3}
+  .t6{--bar:linear-gradient(90deg,#db2777,#f472b6);--soft:#fce7f3;--ink:#9d174d}
+  .t7{--bar:linear-gradient(90deg,#ca8a04,#facc15);--soft:#fef9c3;--ink:#854d0e}
+  .t8{--bar:linear-gradient(90deg,#7c3aed,#c084fc);--soft:#ede9fe;--ink:#5b21b6}
+
   .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-  .why div{background:#fff;border-radius:18px;padding:26px;border-left:5px solid #2563eb;border:1px solid #e2e8f0;border-left:5px solid #2563eb}
+  .why div{background:#fff;border-radius:18px;padding:26px;border:1px solid #e2e8f0;border-left:5px solid #2563eb}
   .why div:nth-child(2){border-left-color:#059669}.why div:nth-child(3){border-left-color:#ea580c}
   .why h4{font-size:18px;margin-bottom:6px;color:#0f172a}
   .why p{color:#64748b;font-size:15px}
@@ -80,7 +87,7 @@
   .cbox small{display:block;opacity:.85;font-size:13px}
   .cbox b{font-size:17px}
   footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0}
-  @media(max-width:760px){.links{display:none}.hero h1{font-size:34px}.hero{padding:70px 0 80px}section{padding:64px 0}.head h2,.contact h2{font-size:27px}}
+  @media(max-width:760px){.links{display:none}.hero h1{font-size:34px}.hero{padding:70px 0 80px}section{padding:64px 0}.head h2,.contact h2{font-size:27px}.tech{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -97,7 +104,7 @@
   <p>We deploy advanced IT systems with a strong emphasis on information security, and provide comprehensive, ongoing support so your systems stay stable, secure and reliable.</p>
   <div class="cta">
     <a href="https://wa.me/972508588880" class="btn btn-main">Chat on WhatsApp</a>
-    <a href="#services" class="btn btn-ghost">Our services</a>
+    <a href="#tech" class="btn btn-ghost">Our technologies</a>
   </div>
 </div></header>
 
@@ -112,24 +119,62 @@
 </div></section>
 
 <section id="tech" class="alt"><div class="container">
-  <div class="head"><div class="tag">Our stack</div><h2>Technologies we work with</h2><p>Proven, enterprise-grade platforms we deploy and support every day.</p></div>
+  <div class="head"><div class="tag">Our stack</div><h2>Technologies we work with</h2><p>Enterprise-grade platforms and tools across infrastructure, cloud, security and automation.</p></div>
   <div class="tech">
-    <div class="tgroup tg1">
-      <h4><span>☁️</span>Cloud &amp; Productivity</h4>
-      <div class="chips"><span class="chip">Microsoft 365</span><span class="chip">Exchange Online</span><span class="chip">SharePoint</span><span class="chip">OneDrive</span><span class="chip">Teams</span><span class="chip">Azure</span></div>
+
+    <div class="tg t1">
+      <h4><span class="ti">🖥️</span>Operating Systems &amp; Administration</h4>
+      <div class="sub"><small>Server &amp; Desktop OS</small><div class="chips"><span class="chip">Windows Server</span><span class="chip">Ubuntu</span><span class="chip">RHEL</span><span class="chip">Debian</span><span class="chip">macOS</span><span class="chip">Windows 10/11</span></div></div>
+      <div class="sub"><small>Identity &amp; Endpoint Management</small><div class="chips"><span class="chip">Active Directory</span><span class="chip">Entra ID</span><span class="chip">Group Policy</span><span class="chip">Intune</span><span class="chip">Jamf</span></div></div>
+      <div class="sub"><small>Virtualization</small><div class="chips"><span class="chip">VMware vSphere / ESXi</span><span class="chip">Hyper-V</span><span class="chip">Proxmox</span></div></div>
     </div>
-    <div class="tgroup tg2">
-      <h4><span>🛡️</span>Security &amp; Identity</h4>
-      <div class="chips"><span class="chip">Microsoft Defender</span><span class="chip">Entra ID</span><span class="chip">Intune</span><span class="chip">Firewalls</span><span class="chip">MFA</span><span class="chip">Endpoint Protection</span></div>
+
+    <div class="tg t2">
+      <h4><span class="ti">☁️</span>Cloud &amp; Infrastructure</h4>
+      <div class="sub"><small>Cloud Platforms</small><div class="chips"><span class="chip">AWS</span><span class="chip">Microsoft Azure</span><span class="chip">Google Cloud</span></div></div>
+      <div class="sub"><small>Containers &amp; Orchestration</small><div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Podman</span></div></div>
+      <div class="sub"><small>Infrastructure as Code</small><div class="chips"><span class="chip">Terraform</span><span class="chip">Ansible</span></div></div>
     </div>
-    <div class="tgroup tg3">
-      <h4><span>🖧</span>Servers &amp; Infrastructure</h4>
-      <div class="chips"><span class="chip">Windows Server</span><span class="chip">Active Directory</span><span class="chip">Hyper-V</span><span class="chip">VMware</span><span class="chip">Linux</span><span class="chip">DNS &amp; DHCP</span></div>
+
+    <div class="tg t3">
+      <h4><span class="ti">🛡️</span>Networking &amp; Security</h4>
+      <div class="sub"><small>Networking</small><div class="chips"><span class="chip">TCP/IP</span><span class="chip">DNS</span><span class="chip">DHCP</span><span class="chip">VPN</span><span class="chip">VLAN</span><span class="chip">BGP</span><span class="chip">Cisco IOS</span><span class="chip">Palo Alto</span><span class="chip">Fortinet</span></div></div>
+      <div class="sub"><small>Security &amp; Monitoring</small><div class="chips"><span class="chip">Splunk</span><span class="chip">Microsoft Sentinel</span><span class="chip">CrowdStrike</span><span class="chip">Wireshark</span><span class="chip">Nessus</span><span class="chip">Qualys</span></div></div>
+      <div class="sub"><small>Compliance &amp; Frameworks</small><div class="chips"><span class="chip">Zero Trust</span><span class="chip">IAM</span><span class="chip">MFA</span><span class="chip">ISO 27001</span><span class="chip">SOC 2</span><span class="chip">NIST</span></div></div>
     </div>
-    <div class="tgroup tg4">
-      <h4><span>🌐</span>Networking &amp; Backup</h4>
-      <div class="chips"><span class="chip">LAN / Wi-Fi</span><span class="chip">VPN</span><span class="chip">Switching &amp; Routing</span><span class="chip">NAS</span><span class="chip">Backup &amp; Recovery</span><span class="chip">Monitoring</span></div>
+
+    <div class="tg t4">
+      <h4><span class="ti">⚙️</span>Programming, Scripting &amp; Automation</h4>
+      <div class="sub"><small>Scripting &amp; Shell</small><div class="chips"><span class="chip">PowerShell</span><span class="chip">Bash</span><span class="chip">Python</span></div></div>
+      <div class="sub"><small>Application Languages</small><div class="chips"><span class="chip">JavaScript / TypeScript</span><span class="chip">Java</span><span class="chip">C#</span><span class="chip">Go</span><span class="chip">C++</span></div></div>
+      <div class="sub"><small>APIs &amp; Formats</small><div class="chips"><span class="chip">REST APIs</span><span class="chip">GraphQL</span><span class="chip">JSON</span><span class="chip">YAML</span></div></div>
     </div>
+
+    <div class="tg t5">
+      <h4><span class="ti">🔄</span>DevOps &amp; Version Control</h4>
+      <div class="sub"><small>Version Control</small><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">Bitbucket</span></div></div>
+      <div class="sub"><small>CI/CD Pipelines</small><div class="chips"><span class="chip">GitHub Actions</span><span class="chip">GitLab CI</span><span class="chip">Jenkins</span><span class="chip">Azure DevOps</span></div></div>
+      <div class="sub"><small>Observability</small><div class="chips"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Datadog</span><span class="chip">ELK Stack</span></div></div>
+    </div>
+
+    <div class="tg t6">
+      <h4><span class="ti">🗄️</span>Databases &amp; Data Analytics</h4>
+      <div class="sub"><small>Relational Databases</small><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Oracle</span></div></div>
+      <div class="sub"><small>NoSQL &amp; Caching</small><div class="chips"><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">DynamoDB</span></div></div>
+      <div class="sub"><small>BI &amp; Data Tools</small><div class="chips"><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Snowflake</span><span class="chip">Apache Spark</span></div></div>
+    </div>
+
+    <div class="tg t7">
+      <h4><span class="ti">🎫</span>IT Service Management &amp; Collaboration</h4>
+      <div class="sub"><small>Ticketing &amp; Project Tracking</small><div class="chips"><span class="chip">Jira</span><span class="chip">ServiceNow</span><span class="chip">Zendesk</span><span class="chip">Confluence</span></div></div>
+      <div class="sub"><small>Productivity Suites</small><div class="chips"><span class="chip">Microsoft 365</span><span class="chip">Exchange</span><span class="chip">SharePoint</span><span class="chip">Teams</span><span class="chip">Google Workspace</span></div></div>
+    </div>
+
+    <div class="tg t8">
+      <h4><span class="ti">🤖</span>AI &amp; Modern Tooling</h4>
+      <div class="sub"><small>AI Integration</small><div class="chips"><span class="chip">OpenAI API</span><span class="chip">Anthropic API</span><span class="chip">Gemini API</span><span class="chip">RAG</span><span class="chip">Model Context Protocol (MCP)</span><span class="chip">LangChain</span></div></div>
+    </div>
+
   </div>
 </div></section>
 
